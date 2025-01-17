@@ -50,7 +50,9 @@
               </div>
             </div>
             <div class="header_actions">
-              <button class="header_btn">УЗНАТЬ ТОЧНУЮ ЦЕНУ</button>
+              <button class="header_btn" onclick="toggleModal()">
+                УЗНАТЬ ТОЧНУЮ ЦЕНУ
+              </button>
 
               <div class="header_actions_desc">
                 <img src="./assets/icons/Polygon.svg" alt="" />
@@ -300,7 +302,7 @@
         <button class="photo_upload">ПРИКРЕПИТЬ ФОТО (ПРИ НАЛИЧИИ)</button>
         <button class="calc_btn">РАССЧИТАТЬ ЦЕНУ ВЫВОЗА</button>
         <div class="form_submit">
-          <div><input type="checkbox" name="" id="" /></div>
+          <div><input type="checkbox" name="" id="" checked /></div>
           <p>
             Я принимаю условия передачи информации и соглашаюсь с политикой
             конфиденциальности
@@ -665,7 +667,7 @@
           <button class="photo_upload">ПРИКРЕПИТЬ ФОТО (ПРИ НАЛИЧИИ)</button>
           <button class="calc_btn">РАССЧИТАТЬ ЦЕНУ ВЫВОЗА</button>
           <div class="form_submit">
-            <div><input type="checkbox" name="" id="" /></div>
+            <div><input type="checkbox" name="" id="" checked /></div>
             <p>
               Я принимаю условия передачи информации <br />
               и соглашаюсь с политикой конфиденциальности
@@ -681,5 +683,35 @@
         </div>
       </div>
     </div>
+
+    <div class="modal"  onclick="toggleModal()">
+      <div class="modal_wrapper" onclick="event.stopPropagation()">
+        <div class="request_form">
+          <img
+            class="close_modal"
+            onclick="toggleModal()"
+            src="./assets/icons/close.svg"
+            alt=""
+          />
+          <h2>Рассчитаем точную цену вывоза по фото за 1 час</h2>
+          <h4>
+            <span>Бесплатно</span> выедем на участок для оценки, если нет
+            возможности сделать фото
+          </h4>
+          <input type="text" placeholder="Введите Ваш номер телефона*" />
+          <button class="photo_upload">ПРИКРЕПИТЬ ФОТО (ПРИ НАЛИЧИИ)</button>
+          <button class="calc_btn">УЗНАТЬ ТОЧНУЮ ЦЕНУ</button>
+          <div class="form_submit">
+            <div><input type="checkbox" name="" id="" checked /></div>
+            <p>
+              Я принимаю условия передачи информации и соглашаюсь с политикой
+              конфиденциальности
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/scripts.js"></script>
   </body>
 </html>

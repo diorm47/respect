@@ -246,9 +246,9 @@ header {
   max-width: 340px;
 }
 .objects_desc p {
-  font-family: Museo Sans Cyrl;
+  font-family: "400";
   font-size: 28px;
-  font-weight: "400";
+  font-weight: 400;
   line-height: 120%;
   letter-spacing: 0%;
   text-align: left;
@@ -270,7 +270,8 @@ header {
 }
 
 .section_title h2 {
-  font-size: "400";
+  font-family: "400";
+  font-size: 28px;
   font-weight: 400;
   line-height: 120%;
   letter-spacing: 0%;
@@ -1182,4 +1183,104 @@ header {
 
 .contact_us_phone p {
   color: rgb(255, 255, 255);
+}
+
+.phone_number p:hover,
+.nav_phone p:hover {
+  text-decoration: underline;
+}
+
+.header_btn:hover {
+  background: rgb(198, 45, 35);
+}
+.header_btn:active {
+  background: rgb(168, 41, 34);
+}
+
+.photo_upload:hover {
+  color: #fff;
+}
+.photo_upload:active {
+  border: 2px solid rgba(255, 255, 255);
+}
+.calc_btn:hover {
+  background: hsla(0, 0%, 100%, 0.8);
+}
+.calc_btn:active {
+  background: hsla(0, 0%, 100%, 0.6);
+}
+.contact_us_form .photo_upload:hover {
+  background: hsla(0, 0%, 100%, 0.2);
+}
+.contact_us_form .photo_upload:active {
+  background: hsla(0, 0%, 100%, 0.4);
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(40px);
+  background: rgba(61, 34, 17, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal_wrapper .request_form {
+  border: none;
+  padding: 60px 40px;
+}
+.modal_wrapper h2 {
+  color: rgb(255, 255, 255);
+  font-family: "700";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.modal_wrapper input {
+  text-align: center;
+}
+
+.request_form h4 {
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+  font-family: "600";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.request_form h4 span {
+  color: #fff;
+  font-family: "700";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.request_form {
+  position: relative;
+}
+
+.close_modal {
+  position: absolute;
+  right: 21px;
+  top: 21px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+}
+.modal_visible {
+  display: flex;
 }
