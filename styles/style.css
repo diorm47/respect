@@ -1302,3 +1302,243 @@ header {
 .success-message {
   margin-top: 30px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .docs_container {
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .products_grid,
+  .trucks_service,
+  .personals_block,
+  .contacts_block,
+  .work_options_list,
+  .services_btm,
+  .services_cards,
+  .objects_wrapper,
+  .header_top,
+  .serv_desc_cards,
+  .contact_us_wrapper,
+  .header_actions,
+  .services_descriptions_artcl {
+    flex-direction: column;
+    display: flex;
+  }
+  .trucks_service img,
+  .services_btm_left,
+  .services_btm_right,
+  .contact_us_form {
+    width: 100%;
+  }
+  .objects_list {
+    flex-wrap: wrap;
+  }
+  .header_top,
+  .header_actions,
+  .services_cards {
+    gap: 20px;
+  }
+  .top_nav_desc p {
+    text-align: center;
+  }
+  .header_content {
+    padding: 40px 10px;
+  }
+  br {
+    display: none;
+  }
+  .header_title h1,
+  .header_title p {
+    font-size: 25px;
+  }
+  .header_descs {
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 50px;
+  }
+  .header_actions_desc img {
+    left: 50%;
+    top: -9px;
+    transform: rotate(90deg);
+  }
+  .header_actions_desc {
+    max-width: 100%;
+    width: 100%;
+  }
+  .services,
+  .objects,
+  .services_descriptions,
+  .prices {
+    padding: 30px 10px;
+  }
+  .objects_desc p {
+    font-size: 22px;
+  }
+  .objects_list {
+    gap: 0;
+    justify-content: space-between;
+  }
+  .objects {
+    padding-bottom: 0;
+  }
+  .section_title h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .section_title p {
+    font-size: 15px;
+  }
+  .serv_desc_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .serv_desc_card p {
+    text-align: center;
+  }
+  .serv_desc_card_last,
+  .contacts_block {
+    padding: 30px 10px;
+  }
+  .services_descriptions_artcl {
+    margin-bottom: 40px;
+  }
+  .services_btm_left {
+    height: auto;
+    padding: 20px;
+  }
+  .services_btm_right img {
+    width: 100%;
+  }
+  .services_btm_right_desc {
+    padding: 20px;
+    padding-bottom: 0;
+  }
+  .prices_list {
+    margin-top: 30px;
+  }
+  .prices_item h2 {
+    font-size: 14px;
+  }
+  .prices_item p,
+  .prices_item h3 {
+    font-size: 14px;
+  }
+  .prices_item {
+    padding-left: 10px;
+    height: 50px;
+  }
+  .call_numers,
+  .request_form {
+    padding: 20px;
+  }
+  .contacts_block {
+    gap: 20px;
+  }
+  .work_option_desc {
+    height: 100px;
+    padding-left: 70px;
+  }
+  .work_options_list_item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .work_options_list_item h4,
+  .work_options_list_item p {
+    text-align: center;
+  }
+  .personals_block_right {
+    width: 100%;
+    min-width: auto;
+    height: auto;
+    padding: 30px 0;
+  }
+  .trucks_service {
+    gap: 20px;
+  }
+  .prices_low img {
+    position: static;
+    margin-top: 20px;
+  }
+  .prices_low {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .products_grid_item {
+    height: 220px;
+    padding: 20px;
+  }
+  .products_line {
+    display: none;
+  }
+  .order_desc p {
+    margin-bottom: 40px;
+  }
+  .contact_us {
+    padding: 40px 0;
+  }
+  .contact_us_phone {
+    padding: 0;
+  }
+  .contact_us .request_form {
+    padding: 0;
+  }
+  .request_form input {
+    font-size: 20px;
+  }
+  .services_btm {
+    margin-top: 30px;
+  }
+  .work_card {
+    flex-direction: column;
+  }
+  .work_cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .work_card_img {
+    width: 100%;
+  }
+  .work_card_img img {
+    width: 100%;
+  }
+  .work_options {
+    padding-bottom: 30px;
+  }
+  .docs, .personals {
+    padding: 30px 0;
+  }
+  .docs_container_left img {
+    position: static;
+    width: 100%;
+  }
+  .docs_container {
+    flex-direction: column;
+  }
+  .docs_container {
+    margin-top: 30px;
+  }
+  .personals {
+    padding: 30px 10px;
+  }
+  .modal_wrapper .request_form {
+    padding: 35px 20px;
+  }
+  .modal_visible {
+    padding: 10px;
+  }
+  .close_modal {
+    top: 10px;
+    right: 10px;
+  }
+}
