@@ -650,7 +650,6 @@ header {
 
 .request_form {
   box-sizing: border-box;
-  border: 8px solid rgb(236, 72, 59);
   background: rgb(236, 72, 59);
   padding: 50px 60px 60px 60px;
   max-width: 410px;
@@ -1283,4 +1282,23 @@ header {
 }
 .modal_visible {
   display: flex;
+}
+
+.error-message {
+  color: #fff;
+  font-size: 14px;
+  font-family: "400";
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: none;
+}
+.success-message {
+  color: green;
+  font-size: 16px;
+  display: none;
+}
+
+.agreement-error,
+.success-message {
+  margin-top: 30px;
 }

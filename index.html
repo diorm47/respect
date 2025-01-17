@@ -298,16 +298,40 @@
       </div>
       <div class="request_form">
         <h2>Отправить заявку</h2>
-        <input type="text" placeholder="Введите Ваш номер телефона*" />
+        <input
+          type="text"
+          placeholder="Введите Ваш номер телефона*"
+          class="phone_number"
+        />
+        <span class="phone-error error-message"
+          >Похоже, Вы ошиблись при вводе. Укажите номер телефона еще раз!</span
+        >
         <button class="photo_upload">ПРИКРЕПИТЬ ФОТО (ПРИ НАЛИЧИИ)</button>
+        <input class="photo" type="file" style="display: none" />
         <button class="calc_btn">РАССЧИТАТЬ ЦЕНУ ВЫВОЗА</button>
         <div class="form_submit">
-          <div><input type="checkbox" name="" id="" checked /></div>
+          <div>
+            <input
+              type="checkbox"
+              name=""
+              id=""
+              checked
+              class="agreement_checkbox"
+            />
+          </div>
           <p>
             Я принимаю условия передачи информации и соглашаюсь с политикой
             конфиденциальности
           </p>
         </div>
+        <span class="agreement-error error-message"
+          >Необходимо дать согласие с политикой конфиденциальности. Без неё
+          отправка невозможна!</span
+        >
+        <span class="success-message"
+          >Спасибо, Ваша заявка успешно отправлена. Мы свяжемся с Вами в
+          ближайшее время!</span
+        >
       </div>
     </div>
 
@@ -663,16 +687,41 @@
             <b>Получите финальный расчет</b> стоимости вывоза и утилизации
             грунта или строительного мусора с Вашего объекта <b>прямо сейчас</b>
           </h2>
-          <input type="text" placeholder="Введите Ваш номер телефона*" />
+          <input
+            type="text"
+            placeholder="Введите Ваш номер телефона*"
+            class="phone_number"
+          />
+          <span class="phone-error error-message"
+            >Похоже, Вы ошиблись при вводе. Укажите номер телефона еще
+            раз!</span
+          >
           <button class="photo_upload">ПРИКРЕПИТЬ ФОТО (ПРИ НАЛИЧИИ)</button>
+          <input class="photo" type="file" style="display: none" />
           <button class="calc_btn">РАССЧИТАТЬ ЦЕНУ ВЫВОЗА</button>
           <div class="form_submit">
-            <div><input type="checkbox" name="" id="" checked /></div>
+            <div>
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                checked
+                class="agreement_checkbox"
+              />
+            </div>
             <p>
               Я принимаю условия передачи информации <br />
               и соглашаюсь с политикой конфиденциальности
             </p>
           </div>
+          <span class="agreement-error error-message"
+            >Необходимо дать согласие с политикой конфиденциальности. Без неё
+            отправка невозможна!</span
+          >
+          <span class="success-message"
+            >Спасибо, Ваша заявка успешно отправлена. Мы свяжемся с Вами в
+            ближайшее время!</span
+          >
         </div>
         <div class="contact_us_phone">
           <h4>Или позвоните для расчета</h4>
@@ -684,7 +733,7 @@
       </div>
     </div>
 
-    <div class="modal"  onclick="toggleModal()">
+    <div class="modal" onclick="toggleModal()">
       <div class="modal_wrapper" onclick="event.stopPropagation()">
         <div class="request_form">
           <img
@@ -698,16 +747,41 @@
             <span>Бесплатно</span> выедем на участок для оценки, если нет
             возможности сделать фото
           </h4>
-          <input type="text" placeholder="Введите Ваш номер телефона*" />
+          <input
+            type="text"
+            placeholder="Введите Ваш номер телефона*"
+            class="phone_number"
+          />
+          <span class="phone-error error-message"
+            >Похоже, Вы ошиблись при вводе. Укажите номер телефона еще
+            раз!</span
+          >
           <button class="photo_upload">ПРИКРЕПИТЬ ФОТО (ПРИ НАЛИЧИИ)</button>
+          <input class="photo" type="file" style="display: none" />
           <button class="calc_btn">УЗНАТЬ ТОЧНУЮ ЦЕНУ</button>
           <div class="form_submit">
-            <div><input type="checkbox" name="" id="" checked /></div>
+            <div>
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                checked
+                class="agreement_checkbox"
+              />
+            </div>
             <p>
               Я принимаю условия передачи информации и соглашаюсь с политикой
               конфиденциальности
             </p>
           </div>
+          <span class="agreement-error error-message"
+            >Необходимо дать согласие с политикой конфиденциальности. Без неё
+            отправка невозможна!</span
+          >
+          <span class="success-message"
+            >Спасибо, Ваша заявка успешно отправлена. Мы свяжемся с Вами в
+            ближайшее время!</span
+          >
         </div>
       </div>
     </div>
