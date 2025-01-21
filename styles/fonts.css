@@ -1,4 +1,11 @@
 @font-face {
+  font-family: "100";
+  src: url("../assets/fonts/MuseoSansCyrl100Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "400";
   src: url("../assets/fonts/museosanscyrl_500.ttf") format("truetype");
   font-weight: normal;
@@ -21,6 +28,12 @@
 @font-face {
   font-family: "700";
   src: url("../assets/fonts/museo700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "900";
+  src: url("../assets/fonts/MuseoSansCyrl900.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
