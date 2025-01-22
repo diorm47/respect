@@ -15,8 +15,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const photoUploadButton = form.querySelector(".photo_upload");
     const submitButton = form.querySelector(".calc_btn");
 
-    const phoneRegex = /^\+7\s?\d{3}[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
+    const phoneRegex = /^\+7\s\d{3}\s\d{3}\s\d{2}\s\d{2}$/;
 
+    // Автоформатирование и ограничение ввода номера телефона
+    phoneInput.addEventListener("input", function () {
+      let value = phoneInput.value.replace(/\D/g, ""); // Убираем все нецифровые символы
+      if (value.startsWith("7")) {
+        value = "+" + value; // Добавляем '+' перед номером
+      } else if (!value.startsWith("+7")) {
+        value = "+7" + value;
+      }
+
+      // Ограничиваем ввод до 10 цифр после префикса +7
+      const maxDigits = 12; // +7 + 10 цифр
+      if (value.length > maxDigits) {
+        value = value.slice(0, maxDigits);
+      }
+
+      phoneInput.value = value.replace(
+        /^(\+7)(\d{3})?(\d{3})?(\d{2})?(\d{2})?$/,
+        (_, p1, p2, p3, p4, p5) =>
+          [p1, p2, p3, p4, p5].filter(Boolean).join(" ").trim()
+      );
+    });
 
     photoUploadButton.addEventListener("click", function (e) {
       e.preventDefault();
@@ -45,23 +66,21 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (isValid) {
-        const formData = new FormData();
-        formData.append("phone", phoneInput.value.trim());
-        formData.append("agreement", agreementCheckbox.checked);
-
-        if (photoInput.files.length > 0) {
-          formData.append("photo", photoInput.files[0]);
-        }
-
-        fetch("your-server-endpoint", {
+        fetch("http://localhost:3000/send-email", {
           method: "POST",
           body: formData,
-        }).then((response) => {
-          if (response.ok) {
-            successMessage.style.display = "block";
-            setTimeout(() => (successMessage.style.display = "none"), 5000);
-          }
-        });
+        })
+          .then((response) => {
+            if (response.ok) {
+              alert("Email успешно отправлен!");
+            } else {
+              alert("Ошибка при отправке email.");
+            }
+          })
+          .catch((error) => {
+            console.error("Ошибка:", error);
+            alert("Произошла ошибка при отправке.");
+          });
       }
     });
   });

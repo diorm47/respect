@@ -10,7 +10,7 @@
     <header>
       <div class="header_wrapper">
         <div class="header_top container">
-          <a href="./index.html">
+          <a href="./index.html" class="logo">
             <img src="./assets/logo.png" alt="" />
           </a>
           <div class="top_nav_desc">
@@ -198,7 +198,11 @@
           </div>
         </div>
         <div class="services_btm_right">
-          <img src="./assets/images/serv-btm.svg" alt="" />
+          <div class="services_btm_right_img">
+            <img src="./assets/images/serv-btm.png" alt="" />
+            <div><p>2023 г</p></div>
+          </div>
+
           <div class="services_btm_right_desc">
             <img src="./assets/icons/samolyot.png" alt="" />
             <h3>ЖК “Живи в Курортном”</h3>
@@ -308,6 +312,7 @@
         >
         <button class="photo_upload">ПРИКРЕПИТЬ ФОТО (ПРИ НАЛИЧИИ)</button>
         <input class="photo" type="file" style="display: none" />
+
         <button class="calc_btn">РАССЧИТАТЬ ЦЕНУ ВЫВОЗА</button>
         <div class="form_submit">
           <div>
@@ -400,7 +405,7 @@
         <div class="work_cards">
           <div class="work_card">
             <div class="work_card_img">
-              <img src="./assets/images/work-card-1.png" alt="" />
+              <img src="./assets/images/work-card-1.svg" alt="" />
               <div><p>2023 г</p></div>
             </div>
             <div class="work_card_desc">
@@ -419,12 +424,12 @@
           </div>
           <div class="work_card">
             <div class="work_card_img">
-              <img src="./assets/images/work-card-2.png" alt="" />
+              <img src="./assets/images/work-card-2.svg" alt="" />
               <div><p>2022 г</p></div>
             </div>
             <div class="work_card_desc">
               <div class="work_card_desc_top">
-                <img src="./assets/icons/akvilon.png" alt="" />
+                <img src="./assets/icons/akvilon.svg" alt="" />
                 <h4>ЖК “Leaves 2”</h4>
                 <p>Вывезли 20000 м3 глиныпо цене сухого грунта</p>
               </div>
@@ -553,8 +558,36 @@
         </h2>
       </div>
       <div class="trucks_service">
-        <img src="./assets/images/truck-1.svg" alt="" />
-        <img src="./assets/images/truck-2.svg" alt="" />
+        <div class="excavator_list">
+          <div class="excavator_list_item">
+            <img src="./assets/images/excavator.png" alt="" />
+            <p>
+              Экскаваторы - <br />
+              погрузчики
+            </p>
+          </div>
+          <div class="excavator_list_item">
+            <img src="./assets/images/excavator-2.png" alt="" />
+            <p>
+              Гусеничные <br />
+              экскаваторы
+            </p>
+          </div>
+        </div>
+        <div class="north_star">
+          <div class="north_star_img">
+            <img src="./assets/images/north-s-bg.png" alt="" />
+            <div><p>2022 г</p></div>
+          </div>
+          <div class="north_star_desc">
+            <img src="./assets/icons/sever-star.png" alt="" />
+            <p>
+              Перемещение, погрузка, вывоз и утилизация обводненного грунта
+              <br />
+              <b> Объем: 25000 м3</b>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -652,7 +685,8 @@
         <div class="request_form contact_us_form">
           <h2>
             <span>Получите финальный расчет</span> стоимости вывоза и утилизации
-            грунта или строительного мусора с Вашего объекта <span>прямо сейчас</span>
+            грунта или строительного мусора с Вашего объекта
+            <span>прямо сейчас</span>
           </h2>
           <input
             type="text"

@@ -279,6 +279,14 @@ header {
   margin-bottom: 20px;
   color: rgba(20, 20, 20, 0.7);
 }
+.section_title span {
+  font-family: "700";
+  font-weight: 700;
+}
+
+.services_btm_right_img {
+  position: relative;
+}
 
 .section_title p {
   color: rgba(20, 20, 20, 0.5);
@@ -832,8 +840,16 @@ header {
 
 .work_card_img {
   position: relative;
+  display: flex;
 }
-.work_card_img div {
+.services_btm_right_img {
+  display: flex;
+}
+.services_btm_right_img img {
+  width: 100%;
+}
+.work_card_img div,
+.services_btm_right_img div {
   position: absolute;
   background: rgb(236, 72, 59);
   width: 79px;
@@ -845,7 +861,8 @@ header {
   left: 10px;
 }
 
-.work_card_img div p {
+.work_card_img div p,
+.services_btm_right_img p {
   color: rgb(255, 255, 255);
   font-family: "700";
   font-size: 14px;
@@ -1317,6 +1334,89 @@ header {
   color: rgba(20, 20, 20, 0.7);
 }
 
+.excavator_list {
+  width: 60%;
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+.excavator_list_item {
+  width: 50%;
+  position: relative;
+}
+.excavator_list_item {
+  width: 100%;
+}
+.excavator_list_item p {
+  color: rgba(20, 20, 20, 0.8);
+  font-family: "700";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-transform: uppercase;
+}
+.excavator_list_item:nth-child(2) p {
+  top: auto;
+  bottom: 10px;
+}
+.north_star {
+  width: 40%;
+  background: rgb(233, 233, 233);
+  padding: 20px;
+}
+.trucks_service {
+  gap: 60px;
+}
+.north_star_img {
+  position: relative;
+}
+.north_star_img img {
+  width: 100%;
+}
+
+.north_star_img div {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background: rgb(236, 72, 59);
+  padding: 8px;
+}
+.north_star_img div p {
+  color: rgb(255, 255, 255);
+  font-family: "700";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.north_star_img {
+  margin-bottom: 10px;
+}
+.north_star_desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 17px;
+}
+.north_star_desc p {
+  color: rgba(20, 20, 20, 0.8);
+  font-family: "400";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.north_star_desc p b {
+  font-family: "700";
+  font-weight: 700;
+}
+
 @media only screen and (max-width: 1000px) {
   .container {
     padding-left: 10px;
@@ -1328,6 +1428,16 @@ header {
 }
 
 @media only screen and (max-width: 500px) {
+  .excavator_list {
+    flex-direction: column;
+  }
+  .excavator_list,
+  .north_star {
+    width: 100%;
+  }
+  .excavator_list_item p br {
+    display: block;
+  }
   .products_grid,
   .trucks_service,
   .personals_block,
@@ -1336,7 +1446,6 @@ header {
   .services_btm,
   .services_cards,
   .objects_wrapper,
-  .header_top,
   .serv_desc_cards,
   .contact_us_wrapper,
   .header_actions,
@@ -1433,6 +1542,7 @@ header {
   }
   .services_btm_right img {
     width: 100%;
+    height: auto;
   }
   .services_btm_right_desc {
     padding: 20px;
@@ -1461,7 +1571,13 @@ header {
   }
   .work_option_desc {
     height: 100px;
-    padding-left: 70px;
+    padding-left: 0;
+  }
+  .work_option_desc img {
+    left: -150px;
+  }
+  .work_option_desc p {
+    text-align: center;
   }
   .work_options_list_item {
     flex-direction: column;
@@ -1561,5 +1677,32 @@ header {
   }
   header {
     background-size: cover;
+  }
+  .work_card_desc {
+    gap: 20px;
+  }
+  .header_top {
+    gap: 10px;
+  }
+  .logo img {
+    width: 100px;
+  }
+  .top_nav_desc p {
+    font-size: 8px;
+  }
+  .nav_phone p,
+  .nav_time p {
+    font-size: 12px;
+  }
+  .nav_phone {
+    margin-bottom: 10px;
+  }
+  .top_nav_desc {
+    max-width: 180px;
+    display: none;
+  }
+  .header_top {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
