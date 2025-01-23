@@ -17,29 +17,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const phoneRegex = /^\+7\s\d{3}\s\d{3}\s\d{2}\s\d{2}$/;
 
-    // Автоформатирование и ограничение ввода номера телефона
     phoneInput.addEventListener("input", function () {
-      let value = phoneInput.value.replace(/\D/g, ""); // Убираем все нецифровые символы
-    
-      // Если номер не начинается с '+', добавляем его
+      let value = phoneInput.value.replace(/\D/g, "");
+
       if (!value.startsWith("+")) {
         value = "+" + value;
       }
-    
-      // Ограничиваем ввод до 12 символов: 1 для '+' и 11 для цифр
-      const maxDigits = 12; // 1 (для знака +) + 11 цифр
+
+      const maxDigits = 12;
       if (value.length > maxDigits) {
         value = value.slice(0, maxDigits);
       }
-    
-      // Форматируем номер с пробелами через каждые 3 и 2 цифры
+
       phoneInput.value = value.replace(
         /^(\+)(\d)(\d{3})(\d{3})(\d{2})(\d{2})$/,
         (_, p1, p2, p3, p4, p5, p6) =>
           [p1 + p2, p3, p4, p5, p6].filter(Boolean).join(" ")
       );
     });
-    
 
     photoUploadButton.addEventListener("click", function (e) {
       e.preventDefault();
