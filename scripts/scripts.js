@@ -20,24 +20,26 @@ document.addEventListener("DOMContentLoaded", function () {
     // Автоформатирование и ограничение ввода номера телефона
     phoneInput.addEventListener("input", function () {
       let value = phoneInput.value.replace(/\D/g, ""); // Убираем все нецифровые символы
-      if (value.startsWith("7")) {
-        value = "+" + value; // Добавляем '+' перед номером
-      } else if (!value.startsWith("+7")) {
-        value = "+7" + value;
+    
+      // Если номер не начинается с '+', добавляем его
+      if (!value.startsWith("+")) {
+        value = "+" + value;
       }
-
-      // Ограничиваем ввод до 10 цифр после префикса +7
-      const maxDigits = 12; // +7 + 10 цифр
+    
+      // Ограничиваем ввод до 12 символов: 1 для '+' и 11 для цифр
+      const maxDigits = 12; // 1 (для знака +) + 11 цифр
       if (value.length > maxDigits) {
         value = value.slice(0, maxDigits);
       }
-
+    
+      // Форматируем номер с пробелами через каждые 3 и 2 цифры
       phoneInput.value = value.replace(
-        /^(\+7)(\d{3})?(\d{3})?(\d{2})?(\d{2})?$/,
-        (_, p1, p2, p3, p4, p5) =>
-          [p1, p2, p3, p4, p5].filter(Boolean).join(" ").trim()
+        /^(\+)(\d)(\d{3})(\d{3})(\d{2})(\d{2})$/,
+        (_, p1, p2, p3, p4, p5, p6) =>
+          [p1 + p2, p3, p4, p5, p6].filter(Boolean).join(" ")
       );
     });
+    
 
     photoUploadButton.addEventListener("click", function (e) {
       e.preventDefault();
